@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<title>Volume of a Sphere</title>
+
+<style> 
+
+body{padding-top:30px;
+}
+
+label,input{display:block;
+padding: 25px;
+} 
+
+h1{
+    color: black;
+}
+.h1{
+    text-align: center;
+  color: rgb(182, 37, 122);
+
+}
+</style>
+
+</head>
+
+<body>
+    <CENter><H1>LAB: 05 TASK_02</H1></CENter><br>
+<h1 class="h1">ENTER VALUE FOR GETTING VOLUME</h1>
+
+<form action="" method="post" id="MyForm">
+
+<br>
+
+<label for="radius">RADIUS</label><input type="text" name="radius" id="radius" required>
+
+<br>
+
+<label for="volume">VOLUME</label><input type="text" name="volume" id="volume">
+
+<br>
+
+<input type="submit" value="Calculate" id="submit">    </form>
+
+<script type="text/javascript">
+    
+function volume_sphere()
+ {
+  var volume;
+  var radius = document.getElementById('radius').value;
+  radius = Math.abs(radius);
+  volume = (4/3) * Math.PI * Math.pow(radius, 3);
+  volume = volume.toFixed(4);
+  document.getElementById('volume').value = volume;
+  return false;
+ } 
+window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+
+
+</script>
+
+</body>
+
+</html>
